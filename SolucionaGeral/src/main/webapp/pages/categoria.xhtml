@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<h:body>
+	<ui:composition template="/WEB-INF/template.xhtml">
+		<ui:define name="title">Soluciona Geral - </ui:define>
+		<ui:define name="content">
+			<p:growl id="mensagem" />
+			<div class="Container100">
+				<div class="ContainerIndent">
+					<div class="Card ShadowEffect ui-fluid">
+						<div class="Container50 Responsive50">
+							<div class="ContainerIndent">
+								<h:form id="cadastroForm">
+									<!--  <h2 class="BigTopic">InputText</h2>-->
+									<p:panelGrid columns="1" layout="grid"
+										style="border:0px !important; background:none;"
+										styleClass="ui-panelgrid-blank">
+										<h:outputLabel value="Nome" />
+										<p:inputText maxlength="50" size="50" value="#{categoriaMB.categoria.nomeCategoria}"/>
+										<h:outputLabel value="Descrição" />
+										<p:inputTextarea maxlength="100" value="#{categoriaMB.categoria.descricaoCategoria}" />
+										<p:commandButton value="Salvar"
+											actionListener="#{categoriaMB.salvar}" update=":mensagem" />
+										<p:commandButton value="Fechar" icon="fa fa-home Fs16 White" />
+									</p:panelGrid>
+								</h:form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</ui:define>
+	</ui:composition>
+</h:body>
+</html>

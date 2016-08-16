@@ -1,0 +1,88 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui"
+                template="/WEB-INF/template.xhtml">
+
+    <ui:define name="content">
+        <div class="Container100">
+            <div class="ContainerIndent">
+                <div class="Card ShadowEffect">
+                    <div class="Container100">
+                        <div class="ContainerIndent">
+                            <div class="Container100 TexAlCenter"><i class="icon-mountains14 Red Fs130 MarTop20" style="line-height:1 !important;"></i></div>
+                            <h1 class="TexAlCenter Fs40 Red">RIO Documentation</h1>
+                            <div class="EmptyBox40"></div>
+                            <p:panel styleClass="">
+                                <div class="Fs20 TexAlCenter Red">Installation</div>
+                                <div class="EmptyBox10"></div>
+                                <p>
+                                    Rio provides a main <i>template.xhtml</i> and additional <i>layoutmenu.xhtml</i>, <i>topbar.xhtml</i> files for the base layout. These 3 files must be placed under
+                                    WEB-INF folder. Provided empty-page.xhtml is a sample content page using the main template.xhtml that defines "content" as the main ui:define placeholder. Other required resources are the css, js, image and font files that are located
+                                    inside resources/rio-layout folder, simply copy the rio-layout folder to your %WEB-APP-FOLDER%/resources folder so that final path would be %WEB-APP-FOLDER%/rio-layout/. Please
+                                    refer to demo app or maven project of the demo app as the reference.
+                                </p>
+                                <p>
+                                    Theme is a regular PrimeFaces theme and setup is simple as defining primefaces.THEME context parameter in web.xml as "rio", refer to <a style="color:#e90c45" href="http://www.primefaces.org/themes">themes page</a> for more information.
+                                </p>
+                                
+                                <div class="Fs20 TexAlCenter Red">Migration Guide</div>
+                                <div class="EmptyBox10"></div>
+                                <div class="Fs15 red">3.1 to 3.1.1</div>
+                                <ul>
+                                    <li>- Replace theme jar with the new jar.</li>
+                                </ul>
+                                
+                                <div class="EmptyBox10"></div>
+                                <div class="Fs15 red">3.0.1 to 3.1</div>
+                                <ul>
+                                    <li>- Replace theme jar with the new jar.</li>
+                                </ul>
+                                <div class="EmptyBox10"></div>
+                                <div class="Fs15 red">3.0 to 3.0.1</div>
+                                <ul>
+                                    <li>- Update layout.js, rio-layout.css, rio-layout.less, core-layout.css and template.xhtml</li>
+                                    <li>- Replace theme jar with the new jar.</li>
+                                </ul>
+                                <div class="EmptyBox10"></div>
+                                <div class="Fs15 red">2.0.1 to 3.0</div>
+                                <ul>
+                                    <li>- Replace theme jar with the new jar.</li>
+                                </ul>
+                                <div class="EmptyBox10"></div>
+                                <div class="Fs15 red">2.0 to 2.0.1</div>
+                                <ul>
+                                    <li>- Update layout.js.</li>
+                                    <li>- Replace theme jar with the new jar.</li>
+                                </ul>
+                                <div class="Fs15 red">1.1 to 2.0</div>
+                                <ul>
+                                    <li>- Update core-layout.css and rio-layout.css files.</li>
+                                    <li>- Update layout.js.</li>
+                                    <li>- Replace theme jar with the new jar.</li>
+                                </ul>
+                                <div class="Fs15 red">1.0 to 1.1</div>
+                                <ul>
+                                    <li>- Update core-layout.css and rio-layout.css files.</li>
+                                    <li>- Update layout.js.</li>
+                                    <li>- Replace theme jar with the new jar.</li>
+                                    <li>- Use styleClass attribute instead of class attribute in h:body component of access-denied, login, error and 404 pages.</li>
+                                </ul>
+                                
+                                <div class="Fs20 TexAlCenter Red">Core Layout</div>
+                                <div class="EmptyBox10"></div>
+                                <p>
+                                    Core Layout is a set of CSS classes used to create responsive grid layouts with additional utilities. Rio uses Core Layout internally, however for grid layout
+                                    you may also choose another utility like <a href="http://www.primefaces.org/showcase/ui/panel/grid.xhtml">Grid CSS</a> or <a href="http://getbootstrap.com/examples/grid/">Bootstrap Grid</a>.
+                                </p>
+
+                            </p:panel>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ui:define>
+
+</ui:composition>

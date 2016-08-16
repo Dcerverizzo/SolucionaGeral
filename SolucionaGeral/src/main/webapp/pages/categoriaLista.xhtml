@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<h:body>
+	<ui:composition template="/WEB-INF/template.xhtml">
+		<ui:define name="content">
+			<div class="Container100">
+				<div class="ContainerIndent">
+					<div class="Card ShadowEffect  ">
+						<div class="Container100">
+							<div class="ContainerIndent">
+								<!-- <h2 class="TexAlCenter BigTopic">DataTable</h2>  -->
+
+								<h:form id="form">
+									<p:dataTable id="tabela"
+										emptyMessage="Nenhum registro encontrado." paginator="true"
+										value="#{categoriaListarMB.categorias}" var="categoria"
+										rows="5">
+										<!--<p:dataTable id="singleDT" var="categoria"
+											value="#{categoriaListarMB.categorias}"
+											selectionMode="single" rows="10" paginator="true"
+											paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+											rowsPerPageTemplate="5,10,15"
+											emptyMessage="Nenhum registro encontrado." reflow="true">
+											 <f:facet name="header">
+                                        Title Aqui 
+                                    </f:facet>-->
+
+										<p:column headerText="Id" sortBy="#{categoria.codigo}"
+											footerText="Id">
+											<h:outputText value="#{categoria.codigo}" />
+										</p:column>
+										<p:column headerText="Nome"
+											sortBy="#{categoria.nomeCategoria}" footerText="Nome">
+											<h:outputText value="#{categoria.nomeCategoria}" />
+										</p:column>
+										<p:column headerText="Descrição"
+											sortBy="#{categoria.descricaoCategoria}"
+											footerText="Descrição">
+											<h:outputText value="#{categoria.descricaoCategoria}" />
+										</p:column>
+										<p:column headerText="Opções">
+											<p:commandButton icon="ui-icon-trash">
+												<p:confirm header="Confirmação"
+													message="Deseja excluir a categoria?" icon="ui-icon-alert" />
+											</p:commandButton>
+										</p:column>
+									</p:dataTable>
+								</h:form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</ui:define>
+	</ui:composition>
+</h:body>
+</html>
